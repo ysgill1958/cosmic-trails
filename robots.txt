@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+Sitemap: https://hypernova.cosmictrails.in/sitemap.xml
+
+# Optimize crawl rate
+Crawl-delay: 10

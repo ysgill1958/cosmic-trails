@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hyper Nova - Discover the Universe Through the Lens. Featuring the stunning astrophotography work of Atish Aman from Cosmic Trails. Experience professional astronomical photography, workshops, and guided stargazing experiences.">
+    <meta name="keywords" content="astrophotography, night sky photography, Atish Aman, astronomy, stargazing, cosmic trails, astronomical workshops, night sky tours, hyper nova">
+    <meta name="author" content="Atish Aman">
+    
+    <title>Hyper Nova | Astronomical Photography & Experiences</title>
+    
+    <!-- Open Graph Meta Tags for better social sharing -->
+    <meta property="og:title" content="Hyper Nova - Astronomical Photography & Experiences">
+    <meta property="og:description" content="Experience the wonders of the universe through professional astrophotography services by Atish Aman of Cosmic Trails.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cosmictrails.in">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">Hyper Nova</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#portfolio">Gallery</a>
+                <a href="#services">Services</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Journey Beyond the Stars</h1>
+                <p>Experience the cosmos through the lens of professional astrophotographer Atish Aman</p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="cta-button primary">Explore Gallery</a>
+                    <a href="https://www.cosmictrails.in" class="cta-button secondary" target="_blank">Visit Cosmic Trails</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About the Artist</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Meet Atish Aman, the visionary behind <a href="https://www.cosmictrails.in" target="_blank">Cosmic Trails</a>, dedicated to capturing the mesmerizing beauty of the night sky. With years of experience and a passion for astronomy, he brings the cosmos closer to Earth through his lens.</p>
+                        <div class="achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-camera"></i>
+                                <h3>Expert Photography</h3>
+                                <p>Specialized in deep-sky imaging and celestial events</p>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <h3>Workshops</h3>
+                                <p>Conducting immersive astrophotography workshops</p>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-star"></i>
+                                <h3>Experience</h3>
+                                <p>Years of professional astronomical imaging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2>Celestial Gallery</h2>
+                <div class="portfolio-grid">
+                    <!-- Portfolio items will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-camera-retro"></i>
+                        <h3>Astrophotography</h3>
+                        <p>Professional astronomical imaging services for various celestial objects and events</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Workshops</h3>
+                        <p>Learn the art and science of astrophotography through hands-on workshops</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Night Sky Tours</h3>
+                        <p>Guided stargazing experiences at prime dark sky locations</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Equipment Consultation</h3>
+                        <p>Expert advice on astrophotography gear and setup</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workshops" class="workshops-section">
+            <div class="container">
+                <h2>Upcoming Workshops</h2>
+                <div class="workshops-grid">
+                    <!-- Workshop items will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <section id="astronomy-news" class="news-section">
+            <div class="container">
+                <h2>Latest in Astronomy</h2>
+                <div class="news-grid">
+                    <div class="news-filters">
+                        <button class="news-filter active" data-source="all">All News</button>
+                        <button class="news-filter" data-source="nasa">NASA</button>
+                        <button class="news-filter" data-source="space">Space.com</button>
+                    </div>
+                    <div id="news-container" class="news-items">
+                        <!-- News items will be dynamically loaded -->
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                            <p>Loading latest astronomy news...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-content">
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <select name="subject">
+                            <option value="">Select Service</option>
+                            <option value="photography">Astrophotography</option>
+                            <option value="workshop">Workshop Booking</option>
+                            <option value="tour">Night Sky Tour</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@cosmictrails.in</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <p><a href="https://www.cosmictrails.in" target="_blank">www.cosmictrails.in</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hyper Nova</h3>
+                    <p>Exploring the universe through the lens</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Gallery</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hyper Nova | Powered by <a href="https://www.cosmictrails.in" target="_blank">Cosmic Trails</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
