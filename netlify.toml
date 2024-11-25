@@ -1,6 +1,11 @@
 [build]
-  publish = "/"
-  command = ""
+  command = "npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
 
 [[redirects]]
   from = "/*"
@@ -14,4 +19,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.gstatic.com *.fontawesome.com; img-src 'self' data: *.cosmictrails.in; font-src 'self' data: *.googleapis.com *.gstatic.com *.fontawesome.com;"
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:;"
