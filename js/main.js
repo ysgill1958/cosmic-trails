@@ -187,9 +187,34 @@ const newsContainer = document.getElementById('news-container');
 const newsFilters = document.querySelectorAll('.news-filter');
 let currentFilter = 'all';
 
-// NASA RSS feed URL (via RSSHub proxy for CORS)
-const NASA_FEED = 'https://rsshub.app/nasa/blogs';
-const SPACE_FEED = 'https://rsshub.app/space/news';
+// RSS Feed URLs
+const NASA_FEED = 'https://www.nasa.gov/feeds/iotd-feed/';
+const SPACE_FEED = 'https://www.space.com/feeds/all';
+
+// Function to parse RSS feed using RSS2JSON API (more reliable than direct RSS parsing)
+async function fetchRSSFeed(url) {
+    try {
+        const rss2jsonAPI = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
+        const response = await fetch(rss2jsonAPI);
+        const data = await response.json();
+        
+        if (data.status === 'ok') {
+            return data.items.map(item => ({
+                title: item.title,
+                link: item.link,
+                description: item.description
+                    .replace(/<[^>]*>/g, '')
+                    .substring(0, 150) + '...',
+                pubDate: item.pubDate,
+                image: item.enclosure?.link || item.thumbnail || 'images/default-news.jpg'
+            }));
+        }
+        return [];
+    } catch (error) {
+        console.error('Error fetching RSS feed:', error);
+        return [];
+    }
+}
 
 // Function to format date
 function formatDate(dateString) {
@@ -217,31 +242,6 @@ function createNewsCard(item, source) {
     `;
 
     return card;
-}
-
-// Function to parse RSS feed
-async function fetchRSSFeed(url) {
-    try {
-        const response = await fetch(url);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'text/xml');
-        const items = xml.querySelectorAll('item');
-
-        return Array.from(items).map(item => ({
-            title: item.querySelector('title')?.textContent,
-            link: item.querySelector('link')?.textContent,
-            description: item.querySelector('description')?.textContent
-                .replace(/<[^>]*>/g, '')
-                .substring(0, 150) + '...',
-            pubDate: item.querySelector('pubDate')?.textContent,
-            image: item.querySelector('enclosure')?.getAttribute('url') ||
-                   item.querySelector('media\\:content')?.getAttribute('url')
-        }));
-    } catch (error) {
-        console.error('Error fetching RSS feed:', error);
-        return [];
-    }
 }
 
 // Function to load news
